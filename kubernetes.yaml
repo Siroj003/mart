@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: "secondLanding"
+  name: "secondLanding"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "secondLanding"
+  template:
+    metadata:
+      labels:
+        app: "secondLanding"
+    spec:
+      containers:
+        - image: zeromaxinc/second_landing_uservicepro:latest         
+          name: "secondLanding"
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: "secondLanding"
+  name: "secondLanding"
+spec:
+  ports:
+    - port: 3000
+      nodePort: 31010
+  selector:
+    app: "secondLanding"
+  type: NodePort

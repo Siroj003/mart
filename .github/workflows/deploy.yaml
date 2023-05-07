@@ -1,0 +1,59 @@
+name: Deployment workflow
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  deployment:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+
+    - uses: actions/checkout@v2
+    - name: Log in to Docker Hub
+      env:
+        DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+      run: |
+        docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+    
+    - name: Build the Docker image
+      run: docker build -t second_landing . && docker tag second_landing zeromaxinc/second_landing_uservicepro 
+  
+    - name: Docker push
+      run: docker push zeromaxinc/second_landing_uservicepro
+
+
+    - name: Log in to Server and Restarting Kubernetes
+      uses: appleboy/ssh-action@master
+      with:
+        host: 146.190.116.39
+        username: root
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
+        script: |
+          cd /root/UservicePro/projects
+          ls
+          kubectl delete -f second_landing_uservicepro.yaml
+          kubectl apply -f second_landing_uservicepro.yaml
+ 
+
+    - name: Configuration Git
+      run: git config --global user.email "zeromax.adm@gmail.com" && git config --global user.name "zeromaxinc"
+
+    - name: Telegram Notification
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_CHAT_ID }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        message: |
+           ${{ github.actor }} created commit:
+            Commit message: ${{ github.event.commits[0].message }}
+            
+            Repository: ${{ github.repository }}
+            
+            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+
