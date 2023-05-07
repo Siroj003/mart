@@ -1,0 +1,37 @@
+@import '@/styles/colors';
+@import '@/styles/device';
+
+.sponsors {
+  padding: 120px 0;
+
+  @include devices(mobile) {
+    padding: 40px 0 40px 20px;
+  }
+
+  @include devices(planshet) {
+    padding: 60px 20px;
+  }
+}
+
+.ul {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  overflow-x: auto;
+  column-gap: 65px;
+  align-items: center;
+
+  @include devices(mobile) {
+    column-gap: 40px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    @include devices(mobile) {
+      svg {
+        width: 100px;
+        height: 33px;
+      }
+    }
+  }
+}

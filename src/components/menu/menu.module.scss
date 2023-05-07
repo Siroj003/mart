@@ -1,0 +1,121 @@
+@import '@/styles/colors';
+@import '@/styles/device';
+
+.menuContainer {
+  display: none;
+  padding: 10px 20px 0 20px;
+  height: 56px;
+  min-height: 56px;
+  max-height: 56px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(22, 22, 22, 0.08);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+  @include devices(mobile) {
+    display: flex;
+  }
+  @include devices(planshet) {
+    display: flex;
+  }
+  z-index: 40000;
+}
+
+.wrapIcon {
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  background-color: white;
+}
+
+.sidebar {
+  top: 0;
+  left: -100vw;
+  bottom: 0;
+  z-index: 200000;
+  width: 100vw;
+  display: none;
+  height: 100vh;
+  position: fixed;
+  transition: 500ms all;
+  flex-direction: column;
+  transform: translateX(-100%);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(22, 22, 22, 0.08);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+  @include devices(planshet) {
+    display: flex;
+  }
+  @include devices(mobile) {
+    display: flex;
+  }
+}
+
+.transform {
+  left: 0;
+  transform: translateX(0) !important;
+}
+
+.header {
+  height: 56px;
+  min-height: 56px;
+  max-height: 56px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 0 20px;
+  border-bottom: 1px solid rgba(22, 22, 22, 0.08);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+}
+
+.subheader {
+  background-color: white;
+  height: 100%;
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav {
+  margin-bottom: 36px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    li {
+      font-weight: 400;
+      font-size: 16px;
+      color: $main-color;
+    }
+  }
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.link {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    color: rgb(145, 145, 145);
+    font-weight: 300;
+    font-size: 12px;
+  }
+
+  p {
+    color: $main-color;
+    font-weight: 400;
+    font-size: 13px;
+  }
+}

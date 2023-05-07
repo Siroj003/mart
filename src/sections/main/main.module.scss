@@ -1,0 +1,81 @@
+@import '@/styles/colors';
+@import '@/styles/device';
+
+.main {
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include devices(mobile) {
+    padding: 10px 20px;
+    flex-direction: column-reverse;
+  }
+
+  @include devices(planshet) {
+    padding: 10px 20px;
+    flex-direction: column-reverse;
+  }
+
+  .text {
+    background: url(../../../public/images/map.webp);
+    h1 {
+      font-family: 'RotaBlack';
+      font-size: 56px;
+      span {
+        font-family: 'RotaBlack';
+        color: $orange;
+      }
+      @include devices(mobile) {
+        font-size: 28px;
+      }
+    }
+
+    h3 {
+      font-weight: 500;
+      font-size: 24px;
+      margin-bottom: 30px;
+      @include devices(mobile) {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      margin-bottom: 30px;
+      @include devices(mobile) {
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .info {
+    display: flex;
+    gap: 60px;
+    h2 {
+      color: $orange;
+      font-size: 36px;
+      font-family: 'RotaBlack';
+      @include devices(mobile) {
+        font-size: 24px;
+      }
+    }
+    span {
+      font-size: 18px;
+      @include devices(mobile) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .image {
+    @include devices(mobile) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+

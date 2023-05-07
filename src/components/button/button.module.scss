@@ -1,0 +1,22 @@
+@import '@/styles/colors';
+@import '@/styles/device';
+
+.button {
+  background-color: transparent;
+  border: 1px solid $orange;
+  border-radius: 1000px;
+  color: $orange;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 18px 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  &:hover {
+    cursor: pointer;
+  }
+
+  //@include devices(mobile) {
+  //  padding: 8px 12px;
+  //  font-size: 12px;
+  //}
+}

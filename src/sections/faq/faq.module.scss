@@ -1,0 +1,99 @@
+@import '@/styles/colors';
+@import '@/styles/device';
+
+.faq {
+  padding: 100px 0;
+
+  @include devices(mobile) {
+    padding: 40px 20px;
+  }
+
+  @include devices(planshet) {
+    padding: 40px 20px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include devices(mobile) {
+    flex-direction: column;
+  }
+
+  @include devices(planshet) {
+    flex-direction: column;
+  }
+}
+
+.title {
+  margin-bottom: 24px;
+  h2 {
+    font-size: 35px;
+    font-family: RotaBold;
+    margin-top: 12px;
+
+    @include devices(mobile) {
+      font-size: 18px;
+    }
+  }
+}
+
+.accordion {
+  width: 600px;
+  display: grid;
+  row-gap: 12px;
+
+  @include devices(mobile) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  @include devices(planshet) {
+    width: 100%;
+    margin-bottom: 40px;
+
+  }
+}
+
+.accordionItem {
+  padding: 20px;
+  background: white;
+  border: 1px solid rgba(22, 22, 22, 0.08);
+  border-radius: 12px;
+
+
+  button {
+    background: none;
+    padding: 0;
+    border: none;
+    font-size: 20px;
+    width: 100%;
+
+    @include devices(mobile) {
+      font-size: 15px;
+    }
+
+  }
+}
+
+.accordionItemTitle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordionContent {
+  margin-top: 20px;
+  padding-top: 12px;
+  font-size: 15px;
+  border-top: 1px solid rgba(22, 22, 22, 0.1);
+  color: $black06;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+

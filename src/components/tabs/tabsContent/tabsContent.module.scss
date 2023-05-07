@@ -1,0 +1,33 @@
+@import '@/styles/colors';
+@import '@/styles/device';
+
+.wrapper {
+  padding: 40px 32px;
+  background: rgba(255, 255, 255, 0.04) url(../../../../public/images/map-offer.webp) no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 42px;
+  border-radius: 0 0 14px 14px;
+  & > .block {
+    h4 {
+      position: relative;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      span {
+        position: absolute;
+        color: rgba(255, 105, 19, 0.2);
+        font-size: 28px;
+        bottom: 0;
+        left: -10px;
+      }
+    }
+    p {
+      font-size: 14px;
+      color: $white05;
+      max-width: 250px;
+    }
+  }
+}

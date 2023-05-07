@@ -1,0 +1,14 @@
+@import "src/styles/colors";
+@import "src/styles/device";
+
+.subTitle {
+  background: rgba(232, 232, 232, 0.5);
+  padding: 4px 8px;
+  border-left: 2px solid $orange;
+  @include devices(mobile) {
+    font-size: 12px;
+  }
+  @include devices(planshet) {
+    font-size: 12px;
+  }
+}

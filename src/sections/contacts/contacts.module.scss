@@ -1,0 +1,106 @@
+@import '@/styles/colors';
+@import '@/styles/device';
+
+.contacts {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 700px;
+
+  @include devices(mobile) {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  @include devices(planshet) {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+.left {
+  height: 700px;
+  background: url(../../../public/images/contacts-bcg.webp) no-repeat;
+  position: relative;
+  background-size: cover;
+
+  @include devices(mobile) {
+    height: 282px;
+    background: url(../../../public/images/contacts-bcg-mobile.webp) no-repeat;
+    background-size: cover;
+  }
+
+  @include devices(planshet) {
+  }
+
+  .image {
+    position: absolute;
+    bottom: -10%;
+    left: -10%;
+
+    @include devices(mobile) {
+      width: 350px;
+      height: 236.42px;
+    }
+
+    @include devices(planshet) {
+      width: 683px;
+      height: 436.42px;
+    }
+  }
+}
+
+.right {
+  background: #262626;
+  height: 700px;
+  padding: 100px;
+
+  @include devices(mobile) {
+    grid-row: 1;
+    padding: 24px 20px 52px 20px;
+    height: auto;
+    width: 100%;
+  }
+
+  @include devices(planshet) {
+    grid-row: 1;
+    height: auto;
+    padding: 24px 20px 52px 20px;
+  }
+
+  .subtitle {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  h2 {
+    color: white;
+    font-size: 28px;
+    font-family: RotaBold;
+    margin: 12px 0;
+  }
+
+  p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+    max-width: 380px;
+  }
+
+  .inputs {
+    display: grid;
+    row-gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .button {
+    width: 100%;
+    background-color: $orange;
+    border-radius: 4px;
+    color: white;
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+}
+
+
