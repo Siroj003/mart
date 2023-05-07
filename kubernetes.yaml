@@ -2,36 +2,36 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: "secondLanding"
-  name: "secondLanding"
+    app: "secondlanding"
+  name: "secondlanding"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: "secondLanding"
+      app: "secondlanding"
   template:
     metadata:
       labels:
-        app: "secondLanding"
+        app: "secondlanding"
     spec:
       containers:
         - image: zeromaxinc/second_landing_uservicepro:latest         
-          name: "secondLanding"
+          name: "secondlanding"
           ports:
             - containerPort: 3000
               protocol: TCP
           
---- 
+---
 apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: "secondLanding"
-  name: "secondLanding"
+    app: "secondlanding"
+  name: "secondlanding"
 spec:
   ports:
     - port: 3000
       nodePort: 31010
   selector:
-    app: "secondLanding"
+    app: "secondlanding"
   type: NodePort
