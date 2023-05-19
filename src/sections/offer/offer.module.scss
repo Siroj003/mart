@@ -3,9 +3,13 @@
 
 .offer {
   position: relative;
-  background-image: linear-gradient(to top, rgba(58, 58, 60, 0), rgba(58, 58, 60, 0)),
-          url(../../../public/images/background-offer.webp);
-  background-color: #3A3A3C;
+  background-image: linear-gradient(
+      to top,
+      rgba(58, 58, 60, 0),
+      rgba(58, 58, 60, 0)
+    ),
+    url(../../../public/images/background-offer.webp);
+  background-color: #3a3a3c;
   background-repeat: no-repeat;
   @include devices(mobile) {
     background-image: none;
@@ -21,7 +25,6 @@
   @include devices(mobile) {
     flex-direction: column-reverse;
     padding: 40px 0 0 0;
-
   }
   @include devices(planshet) {
     flex-direction: column-reverse;
@@ -33,28 +36,33 @@
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  .image {
+    position: unset;
+    object-fit: contain;
+    width: 700px;
+    height: 700px;
+    left: 0;
+  }
   @include devices(mobile) {
     display: none;
   }
   @include devices(planshet) {
     display: none;
   }
-
-
 }
 
 .imageWrapperMobile {
   display: none;
   position: relative;
-
   @include devices(planshet) {
     display: block;
     background-image: url(../../../public/images/background-offer-mobile.webp);
     height: 500px;
     width: 100%;
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   @include devices(mobile) {
@@ -62,9 +70,9 @@
     background-image: url(../../../public/images/background-offer-mobile.webp);
     height: 225px;
     width: 100%;
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .image {
@@ -75,6 +83,9 @@
     }
     @include devices(planshet) {
       position: absolute;
+      object-fit: contain;
+      width: 100%;
+      height: 600px;
     }
   }
 }

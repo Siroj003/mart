@@ -96,7 +96,6 @@
     font-size: 14px;
     color: $grey;
   }
-
 }
 
 .arrows {
@@ -104,7 +103,7 @@
   display: flex;
   gap: 16px;
   justify-content: flex-end;
-
+  cursor: pointer;
   div:hover {
     svg {
       path {
@@ -115,6 +114,5 @@
       fill: $orange;
       opacity: 1;
     }
-
   }
 }

@@ -2,6 +2,9 @@
 @import '@/styles/device';
 
 .headerContainer {
+  position: fixed;
+  z-index: 100;
+  background-color: #fff;
   @include devices(mobile) {
     display: none;
   }
@@ -31,4 +34,3 @@
     font-size: 16px;
   }
 }
-
