@@ -2,106 +2,122 @@
 @import 'device';
 
 @font-face {
-	font-family: 'Rota';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: local('Rota'), url('/fonts/Rota-Regular.otf') format('truetype');
+  font-family: 'Rota';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Rota'), url('/fonts/Rota-Regular.otf') format('truetype');
 }
 
 @font-face {
-	font-family: 'RotaBold';
-	font-style: normal;
-	font-weight: 700;
-	font-display: swap;
-	src: local('RotaBold'), url('/fonts/Rota-Bold.otf') format('truetype');
+  font-family: 'RotaBold';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('RotaBold'), url('/fonts/Rota-Bold.otf') format('truetype');
 }
 
 @font-face {
-	font-family: 'RotaBlack';
-	font-style: normal;
-	font-weight: 900;
-	font-display: swap;
-	src: local('RotaBold'), url('/fonts/Rota-Black.otf') format('truetype');
+  font-family: 'RotaBlack';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('RotaBold'), url('/fonts/Rota-Black.otf') format('truetype');
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 *,
 *::before,
 *::after {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	font-family: 'Rota', 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica',
-	'Arial', sans-serif;
-	box-sizing: border-box;
-	scroll-behavior: smooth !important;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Rota', 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue',
+    'Helvetica', 'Arial', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth !important;
 }
 
 .container-fluid {
-	width: 100vw;
-	display: flex;
-	height: fit-content;
-	align-items: center;
-	flex-direction: column;
+  width: 100vw;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  flex-direction: column;
 }
 
 .container {
-	width: 100%;
-	max-width: 1200px;
+  width: 100%;
+  max-width: 1200px;
 }
 
 #__next {
-	width: 100vw;
-	height: 100vh;
-	flex-grow: 1;
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	justify-content: center;
-	background-color: white;
+  width: 100vw;
+  height: 100vh;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
 }
 
 html {
-	color-scheme: light;
-	min-height: 100vh !important;
-	background-color: white;
-	scroll-behavior: smooth !important;
-	height: -webkit-fill-available !important;
+  color-scheme: light;
+  min-height: 100vh !important;
+  background-color: white;
+  scroll-behavior: smooth !important;
+  height: -webkit-fill-available !important;
 }
 
 body {
-	color: $main-color;
-	background-color: white;
-	scroll-behavior: smooth !important;
-	overflow-x: hidden;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	min-height: 100vh !important;
-	min-height: -webkit-fill-available !important;
+  color: $main-color;
+  background-color: white;
+  scroll-behavior: smooth !important;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh !important;
+  min-height: -webkit-fill-available !important;
 }
 
 .scroll-hidden {
-	&::-webkit-scrollbar-track {
-		background-color: transparent;
-	}
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 
-	&::-webkit-scrollbar {
-		width: 0;
-		height: 0;
-		background-color: transparent;
-	}
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+  }
 
-	&::-webkit-scrollbar-thumb {
-		background-color: transparent;
-		height: 0;
-	}
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    height: 0;
+  }
 }
 
 .szh-accordion__item--expanded {
-	border: 1px solid $orange !important;
+  border: 1px solid $orange !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: white !important;
+  box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.08) inset !important;
+  -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.08) inset !important;
+}
+
+input:-webkit-autofill:focus {
+  background-color: transparent !important;
+  box-shadow: 0 0 0 30px transparent inset !important;
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
 }

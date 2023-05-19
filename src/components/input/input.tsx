@@ -1,16 +1,15 @@
-import styles from './input.module.scss'
+import styles from './input.module.scss';
+import { InputHTMLAttributes } from 'react';
 
-interface IInput {
-	label: string
-	type: string
-	placeholder: string
+interface IInput extends InputHTMLAttributes<HTMLInputElement> {
+  label: string;
 }
 
-export const Input = ({ label, type, placeholder }: IInput) => {
-	return (
-		<label className={styles.container}>
-			<div className={styles.label}>{label}</div>
-			<input className={styles.input} type={type} placeholder={placeholder} />
-		</label>
-	)
-}
+export const Input = ({ label, ...rest }: IInput) => {
+  return (
+    <label className={styles.container}>
+      <div className={styles.label}>{label}</div>
+      <input className={styles.input} {...rest} />
+    </label>
+  );
+};

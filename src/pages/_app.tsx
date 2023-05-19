@@ -5,6 +5,8 @@ import { Header } from '@/components/header';
 import { Menu } from '@/components/menu';
 import { Footer } from '@/components/footer';
 import { DefaultSeo } from 'next-seo';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,8 +14,8 @@ export default function App({ Component, pageProps }: AppProps) {
       <Header />
       <Menu />
       <DefaultSeo
-        title="Martian"
-        description="This example uses more of the available config options."
+        title='Martian'
+        description='This example uses more of the available config options.'
         openGraph={{
           type: 'website',
           locale: 'en_IE',
@@ -27,6 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
       <Component {...pageProps} />
+      <ToastContainer />
       <Footer />
     </div>
   );
