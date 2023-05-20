@@ -13,6 +13,8 @@
   letter-spacing: 0.02em;
   &:hover {
     cursor: pointer;
+    background-color: $orange;;
+    color: white;
   }
 
   //@include devices(mobile) {
