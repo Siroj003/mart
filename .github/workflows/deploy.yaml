@@ -27,31 +27,31 @@ jobs:
       run: docker push zeromaxinc/second_landing_uservicepro
 
 
-    - name: Log in to Server and Restarting Kubernetes
-      uses: appleboy/ssh-action@master
-      with:
-        host: 146.190.116.39
-        username: root
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        script: |
-          cd /root/UservicePro/projects
-          ls
-          kubectl delete -f second_landing_uservicepro.yaml
-          kubectl apply -f second_landing_uservicepro.yaml
+#     - name: Log in to Server and Restarting Kubernetes
+#       uses: appleboy/ssh-action@master
+#       with:
+#         host: 146.190.116.39
+#         username: root
+#         key: ${{ secrets.SSH_PRIVATE_KEY }}
+#         port: 22
+#         script: |
+#           cd /root/UservicePro/projects
+#           ls
+#           kubectl delete -f second_landing_uservicepro.yaml
+#           kubectl apply -f second_landing_uservicepro.yaml
  
 
     - name: Configuration Git
       run: git config --global user.email "zeromax.adm@gmail.com" && git config --global user.name "zeromaxinc"
   
-    - name: Notification Slack
-      uses: rtCamp/action-slack-notify@v2
-      env:
-        SLACK_CHANNEL: QuantumITLLC
-        SLACK_TITLE: About Project
-        SLACK_USERNAME: Quantum'sBot
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_MESSAGE: "${{ github.actor }} created commit:  Commit message: ${{ github.event.commits[0].message }}"
+#     - name: Notification Slack
+#       uses: rtCamp/action-slack-notify@v2
+#       env:
+#         SLACK_CHANNEL: QuantumITLLC
+#         SLACK_TITLE: About Project
+#         SLACK_USERNAME: Quantum'sBot
+#         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+#         SLACK_MESSAGE: "${{ github.actor }} created commit:  Commit message: ${{ github.event.commits[0].message }}"
 
     - name: Telegram Notification
       uses: appleboy/telegram-action@master
