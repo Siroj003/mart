@@ -9,7 +9,7 @@ export const Header = () => {
   return (
     <header className={`${styles.headerContainer} container-fluid`}>
       <div className={`${styles.headerWrap} container`}>
-        <Link href="/">
+        <Link href='/'>
           <IconLogo />
         </Link>
         <nav className={styles.nav}>
@@ -21,7 +21,7 @@ export const Header = () => {
             ))}
           </ul>
         </nav>
-        <Link href="/#contacts">
+        <Link href='/#contacts'>
           <Button>Get in touch</Button>
         </Link>
       </div>
