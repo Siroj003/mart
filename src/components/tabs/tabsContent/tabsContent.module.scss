@@ -6,8 +6,8 @@
   background: rgba(255, 255, 255, 0.04) url(../../../../public/images/map-offer.webp) no-repeat;
   display: flex;
   flex-wrap: wrap;
+  row-gap: 58px;
   justify-content: space-between;
-  row-gap: 42px;
   border-radius: 0 0 14px 14px;
   & > .block {
     h4 {
@@ -27,7 +27,7 @@
     p {
       font-size: 14px;
       color: $white05;
-      max-width: 250px;
+      max-width: 284px;
     }
   }
 }

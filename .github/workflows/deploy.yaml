@@ -27,18 +27,18 @@ jobs:
       run: docker push zeromaxinc/second_landing_uservicepro
 
 
-    - name: Log in to Server and Restarting Kubernetes
-      uses: appleboy/ssh-action@master
-      with:
-        host: 146.190.116.39
-        username: root
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        script: |
-          cd /root/UservicePro/projects
-          ls
-          kubectl delete -f second_landing_uservicepro.yaml
-          kubectl apply -f second_landing_uservicepro.yaml
+#     - name: Log in to Server and Restarting Kubernetes
+#       uses: appleboy/ssh-action@master
+#       with:
+#         host: 146.190.116.39
+#         username: root
+#         key: ${{ secrets.SSH_PRIVATE_KEY }}
+#         port: 22
+#         script: |
+#           cd /root/UservicePro/projects
+#           ls
+#           kubectl delete -f second_landing_uservicepro.yaml
+#           kubectl apply -f second_landing_uservicepro.yaml
  
 
     - name: Configuration Git

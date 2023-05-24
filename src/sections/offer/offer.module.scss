@@ -3,14 +3,10 @@
 
 .offer {
   position: relative;
-  background-image: linear-gradient(
-      to top,
-      rgba(58, 58, 60, 0),
-      rgba(58, 58, 60, 0)
-    ),
+  background-image:
     url(../../../public/images/background-offer.webp);
   background-color: #3a3a3c;
-  background-repeat: no-repeat;
+  background-size: cover;
   @include devices(mobile) {
     background-image: none;
   }
@@ -34,9 +30,8 @@
 
 .imageWrapper {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  left: -5%;
+  top: 5%;
   .image {
     position: unset;
     object-fit: contain;
@@ -78,8 +73,8 @@
   .image {
     @include devices(mobile) {
       position: absolute;
-      width: 300px;
-      height: 300px;
+      width: 100%;
+      height: auto;
     }
     @include devices(planshet) {
       position: absolute;
@@ -91,7 +86,8 @@
 }
 
 .tabsWrapper {
-  max-width: 650px;
+  width: 742px;
+  max-width: 100%;
   margin-left: auto;
   @include devices(mobile) {
     margin-left: 0;

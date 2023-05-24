@@ -102,7 +102,7 @@ const generateEmailContent = (data: any) => {
                                           font-size: 30px;
                                           font-weight: 600;
                                           line-height: 38px;
-                                          color: var(--black);
+                                          /*color: var(--black);*/
                                           letter-spacing: 0.35px;
                                         "
                                       >
@@ -156,6 +156,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       });
       return res.status(200).json({ success: true });
     } catch (err) {
+      // @ts-ignore
       return res.status(400).json({ message: err.message });
     }
   }
