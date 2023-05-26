@@ -19,10 +19,12 @@
   justify-content: space-between;
 
   @include devices(mobile) {
+    gap: 0;
     flex-direction: column;
   }
 
   @include devices(planshet) {
+    gap: 0;
     flex-direction: column;
   }
 }

@@ -20,10 +20,4 @@ export const faqItems = [
     content:
       "We prioritize the safety and security of your freight throughout its interstate journey. Our drivers are highly trained professionals who follow industry best practices and safety protocols. Additionally, our fleet is equipped with advanced tracking systems, allowing you to monitor your shipment's progress in real-time.",
   },
-  {
-    header:
-      'Are there any restrictions or regulations for interstate shipping?',
-    content:
-      'Interstate shipping involves compliance with various regulations and restrictions, including weight limits, size limitations, hazardous materials requirements, and state-specific regulations. Our experienced team is well-versed in these regulations and will ensure your shipment meets all necessary requirements.',
-  },
 ];
