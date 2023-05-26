@@ -5,7 +5,7 @@
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 700px;
+  height: 850px;
 
   @include devices(mobile) {
     grid-template-columns: 1fr;
@@ -19,7 +19,7 @@
 }
 
 .left {
-  height: 700px;
+  height: 850px;
   background: url(../../../public/images/contacts-bcg.webp) no-repeat;
   position: relative;
   background-size: cover;
@@ -52,7 +52,7 @@
 
 .right {
   background: #262626;
-  height: 700px;
+  height: 850px;
   padding: 100px;
 
   @include devices(mobile) {
@@ -102,5 +102,3 @@
     font-size: 14px;
   }
 }
-
-

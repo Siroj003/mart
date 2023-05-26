@@ -7,6 +7,7 @@ import redTuckImage from '../../../public/images/red-truck.webp';
 import { SubTitle } from '@/components/subTitle';
 import { toast } from 'react-toastify';
 import { sendContactForm } from './contact-send';
+import { TextArea } from '@/components/input/input';
 
 const notifySuccess = (text: string) => {
   toast.success(text, {
@@ -71,6 +72,12 @@ export const Contacts = () => {
             type='email'
             placeholder='Enter email'
             name='email'
+          />
+          <TextArea
+            name='message'
+            required
+            label='Message'
+            placeholder='Enter your message here...'
           />
         </div>
         <Button className={styles.button}>
