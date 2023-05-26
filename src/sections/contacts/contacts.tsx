@@ -33,6 +33,7 @@ export const Contacts = () => {
       name: data.get('name'),
       phone: data.get('phone'),
       email: data.get('email'),
+      message: data.get('message'),
     }).then(() => {
       e.target.reset();
       setIsLoading(false);

@@ -3,8 +3,7 @@
 
 .offer {
   position: relative;
-  background-image:
-    url(../../../public/images/background-offer.webp);
+  background-image: url(../../../public/images/background-offer.webp);
   background-color: #3a3a3c;
   background-size: cover;
   @include devices(mobile) {
@@ -35,8 +34,8 @@
   .image {
     position: unset;
     object-fit: contain;
-    width: 700px;
-    height: 700px;
+    max-width: 700px;
+    max-height: 700px;
     left: 0;
   }
   @include devices(mobile) {

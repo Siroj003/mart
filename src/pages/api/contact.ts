@@ -5,6 +5,7 @@ const CONTACT_MESSAGE_FIELDS: any = {
   name: 'Name',
   phone: 'Phone',
   email: 'Email',
+  message: 'Message',
 };
 
 const generateEmailContent = (data: any) => {
@@ -146,7 +147,7 @@ const generateEmailContent = (data: any) => {
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'POST') {
     const data = req.body;
-    if (!data || !data.name || !data.phone || !data.email) {
+    if (!data || !data.name || !data.phone || !data.email || !data.message) {
       return res.status(400).send({ message: 'Bad request' });
     }
     try {

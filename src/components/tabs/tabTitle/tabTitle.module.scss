@@ -1,12 +1,12 @@
 @import '@/styles/colors';
 @import '@/styles/device';
 
-
 .button {
   padding: 24px 32px;
   border: none;
   color: white;
   font-size: 20px;
+  cursor: pointer;
   background: rgba(255, 255, 255, 0.02);
   @include devices(mobile) {
     font-size: 16px;
@@ -27,4 +27,3 @@
 .rightBrdR {
   border-radius: 0 14px 0 0;
 }
-

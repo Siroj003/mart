@@ -14,9 +14,8 @@ export const Footer = () => {
           <div className={styles.left}>
             <IconLogoFooter />
             <p>
-              Leverage agile frameworks to provide a robust synopsis for
-              strategy collaborative thinking to further the overall value
-              proposition.
+              Your Reliable Partner in Ground Logistics, Transporting
+              Possibilities with Precision and Care!
             </p>
             {/* <div className={styles.social}>
 							{social.map(({ href, Icon }, index) => (

@@ -1,10 +1,9 @@
 @import '@/styles/colors';
 @import '@/styles/device';
 
-
 .footer {
   padding: 25px 0;
-  background: #F4F4F4;
+  background: #f4f4f4;
 
   @include devices(planshet) {
     padding: 25px 20px;
@@ -13,7 +12,6 @@
   @include devices(mobile) {
     padding: 25px 20px;
   }
-
 }
 
 .up {
@@ -69,7 +67,6 @@
   gap: 125px;
 
   .pages {
-
     @include devices(mobile) {
       display: none;
     }
