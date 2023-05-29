@@ -3,7 +3,8 @@
 
 .wrapper {
   padding: 40px 32px;
-  background: rgba(255, 255, 255, 0.04) url(../../../../public/images/map-offer.webp) no-repeat;
+  background: rgba(255, 255, 255, 0.04)
+    url(../../../../public/images/map-offer.webp) no-repeat;
   display: flex;
   flex-wrap: wrap;
   row-gap: 58px;
@@ -16,6 +17,9 @@
       font-size: 16px;
       font-weight: 600;
       margin-bottom: 6px;
+      letter-spacing: 0.03em;
+      line-height: 20px;
+
       span {
         position: absolute;
         color: rgba(255, 105, 19, 0.2);
@@ -28,6 +32,9 @@
       font-size: 14px;
       color: $white05;
       max-width: 284px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0.0135em;
     }
   }
 }
