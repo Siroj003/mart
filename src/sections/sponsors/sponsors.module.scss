@@ -27,10 +27,14 @@
   li {
     display: flex;
     align-items: center;
+    svg {
+      width: 120px;
+      height: 50px;
+    }
     @include devices(mobile) {
       svg {
-        width: 100px;
-        height: 33px;
+        width: 120px;
+        height: 50px;
       }
     }
   }
