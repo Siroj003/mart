@@ -2,8 +2,7 @@ name: Deployment workflow
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+
 
 jobs:
   deployment:
@@ -30,12 +29,12 @@ jobs:
     - name: Log in to Server and Restarting Kubernetes
       uses: appleboy/ssh-action@master
       with:
-        host: 209.38.208.65
+        host: 161.35.235.214
         username: root
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         script: |
-          cd /root/Projects/Martian
+          cd /root/Projects/martian
           ls
           kubectl delete -f martian.yaml
           kubectl apply -f martian.yaml
