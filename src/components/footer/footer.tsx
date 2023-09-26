@@ -40,7 +40,12 @@ export const Footer = () => {
               <h3>Contacts</h3>
               <div className={styles.contacts}>
                 {contacts.map(({ title, text, Icon, link }, index) => (
-                  <Link className={styles.link} href={link} key={index}>
+                  <Link
+                    className={styles.link}
+                    href={link}
+                    key={index}
+                    target='_blank'
+                  >
                     <Icon />
                     <div className={styles.details}>
                       <span>{title}</span>
