@@ -20,48 +20,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     
     - name: Build the Docker image
-      run: docker build -t second_landing . && docker tag second_landing zeromaxinc/second_landing_uservicepro 
+      run: docker build -t martian . && docker tag martian zeromaxinc/martian:latest
   
     - name: Docker push
-      run: docker push zeromaxinc/second_landing_uservicepro
-
-
-    - name: Log in to Server and Restarting Kubernetes
-      uses: appleboy/ssh-action@master
-      with:
-        host: 161.35.235.214
-        username: root
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        script: |
-          cd /root/Projects/martian
-          ls
-          kubectl delete -f martian.yaml
-          kubectl apply -f martian.yaml
- 
-
-    - name: Configuration Git
-      run: git config --global user.email "zeromax.adm@gmail.com" && git config --global user.name "zeromaxinc"
-  
-    - name: Notification Slack
-      uses: rtCamp/action-slack-notify@v2
-      env:
-        SLACK_CHANNEL: QuantumITLLC
-        SLACK_TITLE: About Project
-        SLACK_USERNAME: Quantum'sBot
-        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-        SLACK_MESSAGE: "${{ github.actor }} created commit:  Commit message: ${{ github.event.commits[0].message }}"
-
-    - name: Telegram Notification
-      uses: appleboy/telegram-action@master
-      with:
-        to: ${{ secrets.TELEGRAM_CHAT_ID }}
-        token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: |
-           ${{ github.actor }} created commit:
-            Commit message: ${{ github.event.commits[0].message }}
-            
-            Repository: ${{ github.repository }}
-            
-            See changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
-
+      run: docker push zeromaxinc/martian:latest
